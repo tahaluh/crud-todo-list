@@ -5,7 +5,7 @@
 ## <p align="center"> <u>Preview da página(EM BREVE):</u> </p>
 
 <p align="center">
-  <img src="assets/preview.png" height="400px" alt="preview dá página">
+  <img src="assets/preview.png" height="400px" alt="preview da página">
 </p>
 
 > A página possui um front end interativo que permite criar e alterar tarefas"
