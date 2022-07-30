@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --btn-bg-green:  #55aa55;	
+    --btn-bg-green-darker:  #358a35;	
+    --btn-bg-red: #df4759;
+    --btn-bg-red-darker: #bf2739;
+    --btn-bg-yellow: #d1b901;
+    --btn-bg-yellow-darker: #b19900;
+    --card-bg-check: #3f7e27;
+    --font-color: #FFF;
+
+    
+    font-family: Montserrat;
+}
+
 .card--container {
-    width: 50%;
-    border: 3px solid black;
+    min-width: 25%;
+    max-width: 50%;
+    flex-grow: 1;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 6px rgb(0, 0, 0);
     border-radius: 5px;
-    margin: 10px;
+    margin: 17px;
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -16,14 +35,57 @@
 .card--div > * {
     text-align: center;
     width: 100%;
-    margin-top: 5px;
 }
 .card--name {
+    margin: 1rem 0;
     font-weight: bold;
     font-size: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.card--description {
+    font-style: italic;
+    max-width: 80%;
+    padding: 0 10%;
+    margin: 1rem 0;
+}
+.card--date {
+    font-style: italic;
+    margin-bottom: 5px;
+    padding: 1rem 0;
+}
 .card--button {
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-family: Montserrat;
+    color: var(--font-color);
+    line-height: 2rem;
+    font-size: 1rem;
     width: 100%;
     margin-top: 5px;
+    text-decoration: none;
+}
+[ischecked="true"], [ischecked="1"]{
+    box-shadow: 0 0 20px #387022;
+    text-decoration: line-through rgb(0, 0, 0) 2px;
+    color: var(--font-color);
+    background-color: var(--card-bg-check);
+}
+.card--edit{
+    background-color: var(--btn-bg-yellow);
+}
+.card--edit:hover{
+    background-color: var(--btn-bg-yellow-darker);
+}
+.card--save {
+    background-color: var(--btn-bg-green);
+}
+.card--save:hover {
+    background-color: var(--btn-bg-green-darker);
+}
+.card--delete {
+    background-color: var(--btn-bg-red);
+}
+.card--delete:hover {
+    background-color: var(--btn-bg-red-darker);
 }

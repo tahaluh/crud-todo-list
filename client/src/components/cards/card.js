@@ -43,7 +43,7 @@ export default function Card(props) {
     }).then(() => {
       props.setListCard(
         props.listCard.map((value) => {
-          return value.idtodo == editValues.id
+          return value.idtodo === editValues.id
             ? {
                 idtodo: editValues.id,
                 name: editValues.name,
@@ -61,14 +61,14 @@ export default function Card(props) {
     Axios.delete(`http://localhost:3001/delete/${editValues.id}`).then(() => {
       props.setListCard(
         props.listCard.filter((value) => {
-          return value.idtodo != editValues.id;
+          return value.idtodo !== editValues.id;
         })
       );
     });
   };
 
   return (
-    <div className="card--container">
+    <div className="card--container" ischecked={editValues.status.toString()}>
       {!editing ? (
         <div>
           <label className="card--div">
@@ -79,8 +79,14 @@ export default function Card(props) {
             </p>
           </label>
 
-          <button className="card--button" onClick={handleClickEdit}>
+          <button className="card--button card--edit" onClick={handleClickEdit}>
             Editar
+          </button>
+          <button
+            className="card--button card--delete"
+            onClick={handleDeleteTodo}
+          >
+            Apagar
           </button>
         </div>
       ) : (
@@ -114,14 +120,17 @@ export default function Card(props) {
               onChange={handleChangeValues}
             />
           </div>
-          <button className="card--button" onClick={handleClickSave}>
+          <button className="card--button card--save" onClick={handleClickSave}>
             Salvar
+          </button>
+          <button
+            className="card--button card--delete"
+            onClick={handleDeleteTodo}
+          >
+            Apagar
           </button>
         </div>
       )}
-      <button className="card--button" onClick={handleDeleteTodo}>
-        Apagar
-      </button>
     </div>
   );
 }

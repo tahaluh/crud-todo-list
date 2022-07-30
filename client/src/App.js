@@ -25,11 +25,11 @@ function App() {
         description: values.description,
         date: values.date,
       }).then((response) => {
-        console.log(response.data)
+        console.log(response.data);
         setListCard([
           ...listCard,
           {
-            idtodo: response.data[(response.data.length)-1].idtodo,
+            idtodo: response.data[response.data.length - 1].idtodo,
             name: values.name,
             description: values.description,
             date: values.date,
@@ -53,21 +53,21 @@ function App() {
         <input
           type="text"
           name="name"
-          placeholder="Nome da tarefa"
+          placeholder="Nome da tarefa..."
           className="register--input"
           onChange={handleChangeValues}
         ></input>
         <textarea
           form="to-do"
           name="description"
-          placeholder="Descrição"
+          placeholder="Descrição..."
           className="register--input"
           onChange={handleChangeValues}
         ></textarea>
         <input
           type="date"
           name="date"
-          placeholder="Insira seu nome"
+          placeholder="Insira a data"
           className="register--input"
           onChange={handleChangeValues}
         ></input>
@@ -75,21 +75,23 @@ function App() {
           Enviar
         </button>
       </div>
-      {typeof listCard !== "undefined" &&
-        listCard.map((value) => {
-          return (
-            <Card
-              key={value.idtodo}
-              listCard={listCard}
-              setListCard={setListCard}
-              id={value.idtodo}
-              name={value.name}
-              description={value.description}
-              date={value.date}
-              status={value.status}
-            ></Card>
-          );
-        })}
+      <div className="cards--container">
+        {typeof listCard !== "undefined" &&
+          listCard.map((value) => {
+            return (
+              <Card
+                key={value.idtodo}
+                listCard={listCard}
+                setListCard={setListCard}
+                id={value.idtodo}
+                name={value.name}
+                description={value.description}
+                date={value.date}
+                status={value.status}
+              ></Card>
+            );
+          })}
+      </div>
     </div>
   );
 }
