@@ -60,7 +60,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - `mysql2`
 - `nodemon`
 
+---
 
+### Ajustes e melhorias
+
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+
+- [ ] Sistema de login com "tarefas" relacionadas a conta do usuário
+- [ ] Deploy do site em ferramentas de hospedagem gratuitas
 ---
 
 Feito por Thauã Magalhães 👋🏽 Entre em contato!
