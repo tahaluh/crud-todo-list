@@ -67,7 +67,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [ ] Sistema de login com "tarefas" relacionadas a conta do usuário
-- [ ] Deploy do site em ferramentas de hospedagem gratuitas
+- [x] Deploy do site em ferramentas de hospedagem gratuitas
 
 
 ---
