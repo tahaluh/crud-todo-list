@@ -89,3 +89,9 @@
 .card--delete:hover {
     background-color: var(--btn-bg-red-darker);
 }
+
+@media (max-width: 600px) {
+    .card--container {
+        max-width: 80%;
+    }
+}
