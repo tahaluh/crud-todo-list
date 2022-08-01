@@ -10,7 +10,7 @@
 
 > A página possui um front end interativo que permite criar e alterar tarefas"
 
-<h4 align="center"><a href="https://tahaluh.github.io/random-quote-fcc/" target="_blank">Clique para visitar o projeto(EM BREVE)</a></h4>
+<h4 align="center"><a href="https://tahaluh-crud-todo-list.netlify.app" target="_blank">Clique para visitar o projeto</a></h4>
 
 ---
 # 💼 Tecnologias Utilizadas
